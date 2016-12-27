@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX/JSON</title>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+		<h3>Задание 1. Передайте на сервер два числа методом POST. Имена чисел – num1 и num2. Цель — файл a1.php. Если все выполнено верно, то будет возвращена строка с суммой чисел, если нет – ошибка. Способ передачи – AJAX.</h3>
+		<p>Number 1: <input type="text" id="num1" value="1"></p>
+		<p>Number 2: <input type="text" id="num2" value="100"></p>
+		<button id="id1">Push</button>
+	<hr>
+		<h3>Задание 2. Передайте на сервер свой год рождения в формате XXXX. Передачу осуществляйте методом POST, имя переменной year, имя целевого файла – a2.php. Если все выполнено верно, то сервер вернет строку в которой будет количество прожитых лет, если нет – ошибку. Способ передачи – AJAX.</h3>
+		<p>Year: <input type="text" id="year" value="1"></p>
+		<button id="id2">Push</button>
+	<hr>
+		<h3>Задание 3. Создайте форму с radiobutton для выбора пола (мужчина или женщина). Добавьте ползунок для ввода роста (в сантиметрах). По нажатию кнопки “Идеальный вес”, пошлите запрос на файл a3.php. На сервер передается параметр пол – имя параметра sex, значения man или woman и рост ( имя height). Передача осуществляется методом AJAX, с помощью POST.
+
+		Если все выполнено правильно, то будет возвращена строка с расчетом идеального веса под заданный пол. В противном случае – ошибка.</h3>
+		<p><input type="radio" name="sex" value="man"> Man</p>
+		<p><input type="radio" name="sex" value="woman"> Woman</p>
+		<p>Your height: 
+			<!-- <input type="text" id="height"> -->
+			<input id="ran" type="range" min="0" max="200" id="height">
+			<span id="out_r"></span>
+		</p>
+		<button id="id3">Push</button>
+	<hr>
+		<h3>Задание 4. Создайте форму с полями:
+			fio – поле ввода для имени и фамилии;
+			email – поле ввода для email адреса;
+			phone – поле ввода для телефона.
+			По нажатию кнопки передайте данные из полей ввода на сервер (mail.php) посредством POST (AJAX). Имена переменных – такие, как указано в списке. Если все сделано верно, то по адресу указанному в файле mail.php в переменной $to будет отправлено письмо, если нет – выведена ошибка.
+			Возвращаемый формат – строка.</h3>
+		<p>Name Surname: <input type="text" id="fio"></p>
+		<p>Email: <input type="email" id="email"></p>
+		<p>Phone: <input type="number" id="phone"></p> 
+		<button id="id4">Push</button>
+	<hr>
+	<h3>Задание 5. Пошлите на сервер (goods.php) методом GET артикул товара (art). Сервер реагирует только на 2 артикула (1 или 2). Если все выполнено верно то сервер пришлет вам JSON строку с описанием товара. После раскодировки (JSON.parse) вы сможете вывести поля:
+
+	name – имя товара;
+	weight – вес товара;
+	cost – стоимость товара;
+	img – ссылка на картинку.</h3>
+	<button id="id5">Json</button>
+	
+	<p style="border: 1px solid black">Output:
+	<span id="out"></span>
+	</p>
+
+</body>
+</html>
